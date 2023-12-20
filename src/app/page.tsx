@@ -1,4 +1,5 @@
-import MoviesCarouselWrapper from '@/components/MoviesCarouselWrapper'
+import CarouselBannerWrapper from '@/components/CarouselBannerWrapper'
+import MoviesCarousel from '@/components/MoviesCarouselWrapper'
 import { getPopularMovies, getTopRatedMovies, getUpComingMovies } from '@/lib/getMovies'
 
 export default async function Home() {
@@ -6,21 +7,22 @@ export default async function Home() {
   const topRatedMovies = await getTopRatedMovies()
   const popularMovies = await getPopularMovies()    
   return (
-    <main>
+    <main className='bg-white dark:bg-[#1A1C29]'>
       {/* Carousel Wrapper */}
+      <CarouselBannerWrapper/>
 
       {/* Carousel UpComing */}
-      <MoviesCarouselWrapper
+      <MoviesCarousel
       title='Up Coming'
       movies={upComingMovies}
       />
       {/* Carousel TopRated */}
-      <MoviesCarouselWrapper
+      <MoviesCarousel
       title='Top Rated'
       movies={topRatedMovies}
       />
       {/* Carousel Popular */}
-      <MoviesCarouselWrapper
+      <MoviesCarousel
       title='Popular'
       movies={popularMovies}
       />

@@ -8,13 +8,13 @@ interface IProps {
   movies: Movie[];
 }
 
-const MoviesCarouselWrapper = ({ title, movies, isVertical }: IProps) => {
+const MoviesCarousel = ({ title, movies, isVertical }: IProps) => {
   return (
     <div className="container">
       <h3>{title}</h3>
       <div
         className={cn(
-          "flex space-x-4 overflow-x-scroll scrollbar-hide lg:px-10 py-5",
+          "flex space-x-4 overflow-x-scroll scroll-smooth scrollbar-hide lg:px-10 py-5",
           isVertical && "flex flex-col space-x-0  space-y-12"
         )}
       >
@@ -40,4 +40,4 @@ const MoviesCarouselWrapper = ({ title, movies, isVertical }: IProps) => {
   );
 };
 
-export default MoviesCarouselWrapper;
+export default MoviesCarousel;
