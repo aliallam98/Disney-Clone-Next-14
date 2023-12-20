@@ -49,7 +49,8 @@ export const getDiscoverMovies =async (id?:string, keywords?:string)=>{
     keywords && url.searchParams.set("with_keywords", keywords);
     id && url.searchParams.set("with_genres", id)
 
-    const data = await fetchMoviesFromTMDB(url);
+    const data = await fetchMoviesFromTMDB(url) as SearchResults
+
     return data.results;
 
 
@@ -59,8 +60,9 @@ export const getSearchedMovies =async (term:string)=>{
 
     url.searchParams.set("query", term);
 
-    const data = await fetchMoviesFromTMDB(url) 
-    return data.results  as SearchResults
+    const data = await fetchMoviesFromTMDB(url)  as SearchResults
+
+    return data.results 
 
 
 }

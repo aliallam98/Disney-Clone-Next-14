@@ -3,7 +3,7 @@ import { Movie } from "../../typings";
 import MovieCard from "./MovieCard";
 
 interface IProps {
-  title: string;
+  title?: string;
   isVertical?: boolean;
   movies: Movie[];
 }
@@ -11,7 +11,7 @@ interface IProps {
 const MoviesCarousel = ({ title, movies, isVertical }: IProps) => {
   return (
     <div className="container">
-      <h3>{title}</h3>
+      <h3 className="text-2xl">{title}</h3>
       <div
         className={cn(
           "flex space-x-4 overflow-x-scroll scroll-smooth scrollbar-hide lg:px-10 py-5",

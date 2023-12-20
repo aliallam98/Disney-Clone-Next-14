@@ -1,22 +1,38 @@
-import React from 'react'
+import MoviesCarousel from "@/components/MoviesCarousel";
+import { getDiscoverMovies } from "@/lib/getMovies";
+import React from "react";
 
 type Props = {
-    params: {
-        id:string
-    },
-    searchParams:{
-        genre:string
-    }
-}
+  params: {
+    id: string;
+  };
+  searchParams: {
+    genre: string;
+  };
+};
 
-const GenrePage = ({ params: { id}, searchParams: { genre} }: Props) => {
-    
+const GenrePage = async ({ params: { id }, searchParams: { genre } }: Props) => {
+  const movies = await getDiscoverMovies(id)
+  const discoverMovies = await getDiscoverMovies()
+
+  // Ai OpenAi Suggesting
   return (
-    <section>
-        <p>GenrePage</p>
-        <p>Welcome To Genre With Id : {id} And SearchParams genre : {genre}</p>
+    <section className="py-10 mt-20">
+      <div className="container">
+        <p className="text-2xl">
+          The Results For Genre : {genre}
+        </p>
+        <MoviesCarousel
+        movies={movies}
+        isVertical
+        />
+        <MoviesCarousel
+        title="You Also May Like"
+        movies={discoverMovies}
+        />
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default GenrePage
+export default GenrePage;
