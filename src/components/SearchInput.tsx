@@ -3,7 +3,6 @@ import * as z from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 
-import { Button } from "@/components/ui/button"
 import {
   Form,
   FormControl,
@@ -50,7 +49,7 @@ const SearchInput = () => {
         render={({field })=>(
             <FormItem>
                 <FormControl>
-                <Input placeholder="Search" {...field} />
+                <Input placeholder="Search" {...field}  className="border border-neutral-200/50 rounded-lg max-sm:w-[140px]"/>
                 </FormControl>
             </FormItem>
         )}

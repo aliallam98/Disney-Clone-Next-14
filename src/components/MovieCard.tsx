@@ -12,7 +12,7 @@ const MovieCard = ({ movie }: IProps) => {
   return (
     <article className="flex-shrink-0  relative cursor-pointer hover:scale-105 transition duration-200 ease-out ">
       <div className="absolute inset-0 bg-gradient-to-b from-gray-200/0 via-gray-900/10 to-gray-300 dark:to-[#1A1C29]/80 z-10" />
-      <p className="absolute bottom-4 left-4 text-xs ">{movie.title}</p>
+      <p className="absolute bottom-6 left-4 text-sm font-semibold">{movie.title}</p>
       
       <Image
         className="w-fit lg:min-w-[400px] !h-56 object-cover object-center rounded-sm"
