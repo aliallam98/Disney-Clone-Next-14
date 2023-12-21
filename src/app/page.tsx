@@ -12,7 +12,7 @@ export default async function Home() {
   const topRatedMovies = await getTopRatedMovies();
   const popularMovies = await getPopularMovies();
   return (
-    <main className="bg-white bg-[#1A1C29] pb-40">
+    <main className="bg-[#1A1C29] pb-40">
       {/* Carousel Wrapper */}
       <CarouselBannerWrapper />
 
