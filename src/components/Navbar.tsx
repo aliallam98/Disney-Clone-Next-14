@@ -18,7 +18,7 @@ const Navbar = () => {
             {/* Search */}
             <SearchInput/>
             {/* ThemeToggler */}
-          <ThemeToggler />
+          {/* <ThemeToggler /> */}
         </div>
       </div>
     </header>

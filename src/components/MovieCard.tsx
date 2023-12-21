@@ -15,7 +15,7 @@ const MovieCard = ({ movie }: IProps) => {
       <p className="absolute bottom-4 left-4 text-xs ">{movie.title}</p>
       
       <Image
-        className="w-fit lg:min-w-[400px] h-56 object-cover object-center rounded-sm"
+        className="w-fit lg:min-w-[400px] !h-56 object-cover object-center rounded-sm"
         src={getImagePath(movie.backdrop_path || movie.poster_path)}
         alt={movie.title}
         width={1920}

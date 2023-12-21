@@ -14,7 +14,7 @@ const MoviesCarousel = ({ title, movies, isVertical }: IProps) => {
       <h3 className="text-2xl">{title}</h3>
       <div
         className={cn(
-          "flex space-x-4 overflow-x-scroll scroll-smooth scrollbar-hide lg:px-10 py-5",
+          "flex space-x-4 overflow-x-auto scroll-smooth scrollbar-hide lg:px-10 py-5",
           isVertical && "flex flex-col space-x-0  space-y-12"
         )}
       >
